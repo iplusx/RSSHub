@@ -7,7 +7,7 @@
     <channel>
         <title>{{ title }}</title>
         <link>{{ link }}</link>
-        <description><![CDATA[{{@ description || title }}]]></description>
+        <description>{{ description }}</description>
         <generator>RSSHub</generator>
         <webMaster>junyu.wang147@gmail.com</webMaster>
         {{ if itunes_author }}<itunes:author>{{ itunes_author}}</itunes:author>{{ /if }}
