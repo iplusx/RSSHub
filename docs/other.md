@@ -16,12 +16,6 @@ pageClass: routes
 
 <Route author="xyqfer" example="/36kr/search/article/8%E7%82%B91%E6%B0%AA" path="/36kr/search/article/:keyword" :paramsDesc="['关键字']" />
 
-## 7x24 小时快讯
-
-### 7x24 小时快讯
-
-<Route author="occupy5" example="/fx678/kx" path="/fx678/kx" />
-
 ## 99% Invisible
 
 ### Transcript
@@ -67,6 +61,20 @@ pageClass: routes
 ### 美国签证 check 动态
 
 <Route author="lalxyy" example="/checkee/2019-03" path="/checkee/:month" :paramsDesc="['签证被 check 的年份-月份，如 2019-03']" />
+
+## cnBeta
+
+### 最新
+
+<Route author="kt286" example="/cnbeta" path="/cnbeta"/>
+
+## Dilbert Comic Strip
+
+<Route name="Daily Strip" author="Maecenas" example="/dilbert/strip" path="/dilbert/strip">
+
+通过提取漫画，提供比官方源更佳的阅读体验。
+
+</Route>
 
 ## DoNews
 
@@ -181,6 +189,12 @@ pageClass: routes
 
 </Route>
 
+## sixthtone
+
+### 最新文章
+
+<Route author="kt286" example="/sixthtone/news" path="/sixthtone/news"/>
+
 ## The Verge
 
 ### The Verge
@@ -256,6 +270,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 产业研究报告
 
 <Route author="brilon" example="/iresearch/report" path="/iresearch/report"/>
+
+## 巴比特
+
+### 作者专栏
+
+<Route author="kt286" example="/8btc/45703" path="/8btc/:authorid" :paramsDesc="['作者ID，可在对应专辑页面的 URL 中找到']"/>
 
 ## 百度
 
@@ -416,12 +436,6 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="occupy5" example="/guanchazhe/topic/113" path="/guanchazhe/topic/:id" :paramsDesc="['话题id， 可在URL中找到']" />
 
-## 数英网
-
-### 数英网最新文章
-
-<Route author="occupy5" example="/digitaling/index" path="/digitaling/index" :paramsDesc="['首页最新文章, 数英网']" />
-
 ## 果壳网
 
 ### 科学人
@@ -468,6 +482,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="HenryQW" example="/huxiu/author/29318" path="/huxiu/author/:id" :paramsDesc="['用户 id']" />
 
+## 汇通网
+
+### 7x24 小时快讯
+
+<Route author="occupy5" example="/fx678/kx" path="/fx678/kx" />
+
 ## 惠誉评级
 
 ### 板块信息
@@ -510,19 +530,17 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="WenryXu" example="/juesheng" path="/juesheng"/>
 
-## 快递
+## 空气质量
 
-### 快递
+### 实时 AQI
 
-<Route author="DIYgod" example="/express/youzhengguoji/CV054432809US" path="/express/:company/:number" :paramsDesc="['快递公司代码, 参考 [API URL 所支持的快递公司及参数说明](https://www.kuaidi100.com/download/api_kuaidi100_com%2820140729%29.doc)', '快递单号']">
+<Route author="xapool" example="/aqicn/beijing" path="/aqicn/:city" :paramsDesc="['城市拼音或地区 ID，详见[aqicn.org](http://aqicn.org/city/)']"/>
 
-::: warning 注意
+## 快科技（原驱动之家）
 
-快递送达后请及时取消订阅, 以免浪费服务器资源
+### 最新新闻
 
-:::
-
-</Route>
+<Route author="kt286" example="/kkj/news" path="/kkj/news"/>
 
 ## 老司机
 
@@ -680,11 +698,49 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="SunShinenny" example="/sspai/author/796518" path="/sspai/author/:id"  :paramsDesc="['作者 id，可在作者主页URL中找到']"/>
 
+### 专题
+
+<Route author="SunShinenny" example="/sspai/topics" path="/sspai/topics">
+此为专题广场更新提示=>集合型而非单篇文章.与下方"专题内文章更新"存在明显区别!
+</Route>
+
+### 专题内文章更新
+
+<Route author="SunShinenny" example="/sspai/topic/250" path="/sspai/topic/:id"  :paramsDesc="['专题 id，可在专题主页URL中找到']"/>
+
 ## 世界卫生组织
 
 ### 媒体中心
 
 <Route author="LogicJake" example="/who/news-room/feature-stories" path="/who/news-room/:type" :paramsDesc="['类别，可在 URL 中找到']"/>
+
+## 数英网
+
+### 数英网最新文章
+
+<Route author="occupy5" example="/digitaling/index" path="/digitaling/index" :paramsDesc="['首页最新文章, 数英网']" />
+
+### 数英网文章专题
+
+<Route author="occupy5" example="/digitaling/articles/latest" path="/digitaling/articles/:category/:subcate?" :paramsDesc="['文章专题分类 ','hot分类下的子类']" />
+
+| 最新文章 | 头条     | 热文 | 精选   |
+| -------- | -------- | ---- | ------ |
+| latest   | headline | hot  | choice |
+
+分类`hot`下的子类
+
+| 近期热门文章 | 近期最多收藏 | 近期最多赞 |
+| ------------ | ------------ | ---------- |
+| views        | collects     | zan        |
+
+### 数英网项目专题
+
+<Route author="occupy5" example="/digitaling/projects/all" path="/digitaling/projects/:category" :paramsDesc="['项目专题分类 ']" />
+
+| 全部 | 每周项目精选 | 每月项目精选 | 海外项目精选  | 近期热门项目 | 近期最多收藏 |
+| ---- | ------------ | ------------ | ------------- | ------------ | ------------ |
+| all  | weekly       | monthly      | international | hot          | favorite     |
 
 ## 刷屏
 
@@ -793,6 +849,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 </Route>
 
+## 新浪专栏
+
+### 创事记
+
+<Route author="xapool" example="/sina/csj" path="/sina/csj"/>
+
 ## 异次元软件世界
 
 ### 首页
@@ -804,6 +866,11 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 新闻
 
 <Route author="LogicJake" example="/mpaypass/news" path="/mpaypass/news"/>
+
+### 分类
+
+<Route author="zhuan-zhu" example="/mpaypass/main/policy" path="mpaypass/main/:type?"
+:paramsDesc="['新闻类型,类型可在URL中找到，类似policy，eye等，空或其他任意值展示最新新闻']"/>
 
 ## 油价
 
@@ -846,3 +913,9 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 房源
 
 <Route author="DIYgod" example="/ziroom/room/sh/1/2/五角场" path="/ziroom/room/:city/:iswhole/:room/:keyword" :paramsDesc="['城市, 北京 bj; 上海 sh; 深圳 sz; 杭州 hz; 南京 nj; 广州 gz; 成都 cd; 武汉 wh; 天津 tj', '是否整租', '房间数', '关键词']"/>
+
+## 紫竹张先生
+
+### 全文
+
+<Route author="HenryQW" example="/zzz" path="/zzz/index"/>
