@@ -2850,6 +2850,14 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
+cross-env@5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-5.2.0.tgz#6ecd4c015d5773e614039ee529076669b9d126f2"
+  integrity sha512-jtdNFfFW1hB7sMhr/H6rW1Z45LFqyI431m3qU6bFXcQ3Eh7LtBuG3h74o7ohHZ3crrRkkqHlo4jYHFPcjroANg==
+  dependencies:
+    cross-spawn "^6.0.5"
+    is-windows "^1.0.0"
+
 cross-spawn@^5.0.1:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-5.1.0.tgz#e8bd0efee58fcff6f8f94510a0a554bbfa235449"
@@ -5434,7 +5442,7 @@ is-typedarray@~1.0.0:
   resolved "https://registry.yarnpkg.com/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
   integrity sha1-5HnICFjfDBsR3dppQPlgEfzaSpo=
 
-is-windows@^1.0.2:
+is-windows@^1.0.0, is-windows@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/is-windows/-/is-windows-1.0.2.tgz#d1850eb9791ecd18e6182ce12a30f396634bb19d"
   integrity sha512-eXK1UInq2bPmjyX6e3VHIzMLobc4J94i4AWn+Hpq3OU5KkrRC96OAcR3PRJ/pGu6m8TRnBHP9dkXQVsT/COVIA==
@@ -6504,7 +6512,18 @@ markdown-it-table-of-contents@^0.4.0:
   resolved "https://registry.yarnpkg.com/markdown-it-table-of-contents/-/markdown-it-table-of-contents-0.4.4.tgz#3dc7ce8b8fc17e5981c77cc398d1782319f37fbc"
   integrity sha512-TAIHTHPwa9+ltKvKPWulm/beozQU41Ab+FIefRaQV1NRnpzwcV9QOe6wXQS5WLivm5Q/nlo0rl6laGkMDZE7Gw==
 
-markdown-it@8.4.2, markdown-it@^8.4.1:
+markdown-it@9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-9.0.0.tgz#804e9285d2a0e2457216ed6a1d96e219483f2fb1"
+  integrity sha512-bUVTYGt/K/mYr3HlE+PBe6TOTyWghcpSZqOD9t+NFRlwJMhp9Kp6WQ8fJ26I6v1Xo71UmPYt1S4Hc9Lq8GZx2Q==
+  dependencies:
+    argparse "^1.0.7"
+    entities "~1.1.1"
+    linkify-it "^2.0.0"
+    mdurl "^1.0.1"
+    uc.micro "^1.0.5"
+
+markdown-it@^8.4.1:
   version "8.4.2"
   resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-8.4.2.tgz#386f98998dc15a37722aa7722084f4020bdd9b54"
   integrity sha512-GcRz3AWTqSUphY3vsUqQSFMbgR38a4Lh3GWlHRh/7MRwz8mcu9n2IO7HOh+bXHrR9kOPDl5RNCaEsrneb+xhHQ==
@@ -6891,10 +6910,10 @@ no-case@^2.2.0:
   dependencies:
     lower-case "^1.1.1"
 
-nock@11.0.0-beta.21:
-  version "11.0.0-beta.21"
-  resolved "https://registry.yarnpkg.com/nock/-/nock-11.0.0-beta.21.tgz#c02c66fb7d26cc49677d1252aeadb4791991e762"
-  integrity sha512-t/gf913pdw34y4ZbkWsDXXd9ShtCRcScZTFLzd1LPcr/W6lUrGYQxtQ4zWwUnnLqcG2mejOaCP8tcckc7QsXEA==
+nock@11.0.0-beta.23:
+  version "11.0.0-beta.23"
+  resolved "https://registry.yarnpkg.com/nock/-/nock-11.0.0-beta.23.tgz#e18d1d9b11e7444f8a4925331f5f4b6172b770e4"
+  integrity sha512-D03++S4wWPxqM3XUXaHTvU9TrwjypaSrroVK1k7CT3w95i93js2TUwZ3KvR08pbmO23bG747RK4LVl7vEemteQ==
   dependencies:
     chai "^4.1.2"
     debug "^4.1.0"
