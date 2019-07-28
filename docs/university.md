@@ -312,7 +312,7 @@ category 列表：
 
 ### 教务处新闻动态
 
-<Route author="KeNorizon" example="/scut/jwc/1" path="/scut/jwc/:category?" :paramsDesc="['新闻动态分类, 可选, 默认为 `1`']">
+<Route author="KeNorizon" example="/scut/jwc/1" path="/scut/jwc/:category?" :paramsDesc="['新闻动态分类, 默认为 `1`']">
 
 | 教务通知 | 交流交换 | 新闻动态 | 媒体关注 | 学院通知 |
 | -------- | -------- | -------- | -------- | -------- |
@@ -403,6 +403,12 @@ category 列表：
 | notice   | news     |
 
 </Route>
+
+## 南京工业大学
+
+### 南京工业大学教务处
+
+<Route author="TrumanGu" example="/njtech/jwc" path="/njtech/jwc" />
 
 ## 南京航空航天大学
 
@@ -726,6 +732,12 @@ https://rsshub.app/**nuist**/`bulletin` 或 https://rsshub.app/**nuist**/`bullet
 
 </Route>
 
+## 四川大学
+
+### 教务处通知公告
+
+<Route author="KXXH" example="/scu/jwc/notice" path="/scu/jwc/notice" />
+
 ## 四川旅游学院
 
 ### 信息与工程学院动态公告列表
@@ -922,6 +934,10 @@ https://rsshub.app/**nuist**/`bulletin` 或 https://rsshub.app/**nuist**/`bullet
 ### 教务网通知公告
 
 <Route author="El-Chiang" example="/cqu/jwc/announcement" path="/universities/cqu/jwc/announcement"/>
+
+### 新闻网讲座预告
+
+<Route author="nicolaszf" example="/cqu/news/jzyg" path="/universities/cqu/news/jzyg"/>
 
 ## 重庆科技学院
 

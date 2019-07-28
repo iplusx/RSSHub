@@ -56,6 +56,12 @@ pageClass: routes
 
 </Route>
 
+## BOF
+
+### 首页
+
+<Route author="kt286" example="/bof/home" path="/bof/home" />
+
 ## checkee.info
 
 ### 美国签证 check 动态
@@ -264,6 +270,26 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 </Route>
 
+## wikiHow
+
+### 首页
+
+<Route author="sanmmm" example="/wikihow/index" path="/wikihow/index"/>
+
+### 分类目录
+
+<Route author="sanmmm" example="/wikihow/category/饮食与休闲/" path="/wikihow/category/:category/:type" :paramsDesc="['目录分类', '类型']">
+
+顶级目录分类可在目录分类页[查看](https://zh.wikihow.com/Special:CategoryListing), 支持二级目录
+
+类型
+
+| 所有 | 推荐 |
+| ---- | ---- |
+| all  | rec  |
+
+</Route>
+
 ## ZAKER
 
 ### source
@@ -273,6 +299,29 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### channel
 
 <Route author="kt286" example="/zaker/channel/13" path="/zaker/source/:id" :paramsDesc="['channel id，可在 URL 中找到']"/>
+
+## 爱发电
+
+### 发现用户
+
+<Route author="sanmmm" example="/afdian/explore/hot/所有" path="/afdian/explore/:type/:category?" :paramsDesc="['分类', '目录类型, 默认为 `所有`']">
+分类
+
+| 最新 | 推荐 | 最热 |
+| ---- | ---- | ---- |
+| new  | rec  | hot  |
+
+目录类型
+
+| 所有 | 绘画 | 视频 | 写作 | 游戏 | 音乐 | 播客 | 摄影 | 技术 | Vtuber | 舞蹈 | 体育 | 旅游 | 美食 | 时尚 | 数码 | 动画 | 其他 |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ------ | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| 所有 | 绘画 | 视频 | 写作 | 游戏 | 音乐 | 播客 | 摄影 | 技术 | Vtuber | 舞蹈 | 体育 | 旅游 | 美食 | 时尚 | 数码 | 动画 | 其他 |
+
+</Route>
+
+### 用户动态
+
+<Route author="sanmmm" example="/afdian/dynamic/@afdian" path="/afdian/dynamic/:uid?" :paramsDesc="['用户id, 用户动态页面url里可找到']"/>
 
 ## 爱范儿 ifanr
 
@@ -335,12 +384,6 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="fengkx" example="/maitta" path="/maitta" supportPodcast="1" />
 
-## 博客: 敬维
-
-### 博客: 敬维
-
-<Route author="a180285" example="/blogs/jingwei.link" path="/blogs/jingwei.link"/>
-
 ## 财新博客
 
 ### 用户博客
@@ -372,6 +415,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 标签
 
 <Route author="LogicJake" example="/cyzone/label/创业邦周报" path="/cyzone/label/:name" :paramsDesc="['标签名称']"/>
+
+## 大侠阿木
+
+### 首页
+
+<Route author="kt286" example="/daxiaamu/home" path="/daxiaamu/home"/>
 
 ## 大众点评
 
@@ -448,6 +497,16 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="junfengP" example="/metred/fuli" path="/metred/fuli" />
 
+## 个人博客
+
+### 敬维
+
+<Route author="a180285" example="/blogs/jingwei.link" path="/blogs/jingwei.link"/>
+
+### 王垠-当然我在扯淡
+
+<Route author="junbaor" example="/blogs/wangyin" path="/blogs/wangyin"/>
+
 ## 古诗文网
 
 ### 首页推荐
@@ -522,11 +581,11 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 ### 分类
 
-<Route author="MoguCloud" example="/gcores/category/1" path="/gcores/category/:category" :paramsDesc="['分类名']">
+<Route author="MoguCloud" example="/gcores/category/news" path="/gcores/category/:category" :paramsDesc="['分类名']">
 
-| 文章 | 新闻 | 电台 |
-| ---- | ---- | ---- |
-| 1    | 2    | 9    |
+| 资讯 | 视频   | 电台   | 文章     |
+| ---- | ------ | ------ | -------- |
+| news | videos | radios | articles |
 
 </Route>
 
@@ -547,6 +606,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 首页
 
 <Route author="LogicJake" example="/whalegogo/home" path="/whalegogo/home"/>
+
+## 巨潮资讯
+
+### 公司公告
+
+<Route author="LogicJake" example="/cninfo/stock_announcement/000410" path="/cninfo/stock_announcement/:code" :paramsDesc="['股票代码']"/>
 
 ## 决胜网
 
@@ -599,6 +664,18 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 马良行
 
 <Route author="junfengP" example="/mlhang" path="/mlhang" />
+
+## 镁客网 im2maker
+
+### 镁客网频道
+
+<Route author="jin12180000" example="/im2maker/" path="/im2maker/:channel?" :paramsDesc="['默认不填为 最新文章 ，频道如下']">
+
+| 最新文章 | 行业快讯 | 行业观察 | 镁客请讲 | 硬科技 100 人 | 投融界   | 万象       |
+| -------- | -------- | -------- | -------- | ------------- | -------- | ---------- |
+| 默认空   | fresh    | industry | talk     | intech        | investor | everything |
+
+</Route>
 
 ## 每日安全
 
@@ -725,7 +802,9 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 专题
 
 <Route author="SunShinenny" example="/sspai/topics" path="/sspai/topics">
+
 此为专题广场更新提示=>集合型而非单篇文章.与下方"专题内文章更新"存在明显区别!
+
 </Route>
 
 ### 专题内文章更新
@@ -849,6 +928,18 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 </Route>
 
+## 万联网
+
+### 资讯
+
+<Route author="kt286" example="/10000link/news/My01" path="/10000link/news/:category?" :paramsDesc="['栏目代码, 默认为全部']">
+
+| 全部 | 天下大势 | 企业动态 | 专家观点 | 研究报告 |
+| ---- | -------- | -------- | -------- | -------- |
+| (空) | My01     | My02     | My03     | My04     |
+
+</Route>
+
 ## 维基百科
 
 ### 中国大陆新闻动态
@@ -887,11 +978,65 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 </Route>
 
+## 香水时代
+
+### 首页
+
+<Route author="kt286" example="/nosetime/home" path="/nosetime/home"/>
+
+### 香评
+
+<Route author="kt286" example="/nosetime/59247733/discuss/new" path="/nosetime/:id/:type/:sort?" :paramsDesc="['用户id，可在用户主页 URL 中找到', '类型，short 一句话香评  discuss 香评', '排序， new 最新  agree 最有用']"/>
+
 ## 新浪专栏
 
 ### 创事记
 
 <Route author="xapool" example="/sina/csj" path="/sina/csj"/>
+
+## 学堂在线
+
+### 课程信息
+
+<Route author="sanmmm" example="/xuetangx/course/course-v1:TsinghuaX+20240103X+2019_T1/status" path="/xuetangx/course/:cid/:type" :paramsDesc="['课程id, 从课程页URL中可得到', '课程信息类型']">
+
+课程信息类型
+
+| 课程开始时间 | 课程结束时间 | 课程进度 |
+| ------------ | ------------ | -------- |
+| start        | end          | status   |
+
+</Route>
+
+### 课程列表
+
+<Route author="sanmmm" example="/xuetangx/course/list/0/1/0" path="/xuetangx/course/list/:mode/:status/:credential/:type?" :paramsDesc="['课程模式', '课程状态', '课程认证类型', '学科分类 默认为`全部`']">
+
+课程模式
+
+| 自主 | 随堂 | 付费 | 全部 |
+| ---- | ---- | ---- | ---- |
+| 0    | 1    | 2    | -1   |
+
+课程状态
+
+| 即将开课 | 已开课 | 已结课 | 全部 |
+| -------- | ------ | ------ | ---- |
+| 1        | 2      | 3      | -1   |
+
+课程认证类型
+
+| 签字认证 | 认证开放 | 全部 |
+| -------- | -------- | ---- |
+| 1        | 2        | -1   |
+
+学科分类
+
+| 全部 | 计算机 | 经管·会计 | 创业 | 电子 | 工程 | 环境·地球 | 医学·健康 | 生命科学 | 数学 | 物理 | 化学 | 社科·法律 | 文学 | 历史 | 哲学 | 艺术·设计 | 外语 | 教育 | 其他 | 大学先修课 | 公共管理 | 建筑 | 职场 | 全球胜任力 |
+| ---- | ------ | --------- | ---- | ---- | ---- | --------- | --------- | -------- | ---- | ---- | ---- | --------- | ---- | ---- | ---- | --------- | ---- | ---- | ---- | ---------- | -------- | ---- | ---- | ---------- |
+| -1   | 117    | 118       | 119  | 120  | 121  | 122       | 123       | 124      | 125  | 126  | 127  | 128       | 129  | 130  | 131  | 132       | 133  | 134  | 135  | 201        | 2550     | 2783 | 2952 | 6200       |
+
+</Route>
 
 ## 异次元软件世界
 
@@ -910,6 +1055,31 @@ type 为 all 时，category 参数不支持 cost 和 free
 <Route author="zhuan-zhu" example="/mpaypass/main/policy" path="mpaypass/main/:type?"
 :paramsDesc="['新闻类型,类型可在URL中找到，类似policy，eye等，空或其他任意值展示最新新闻']"/>
 
+## 一兜糖
+
+### 首页精选
+
+<Route author="sanmmm" example="/yidoutang/index" path="/yidoutang/index"/>
+
+### 文章
+
+<Route author="sanmmm" example="/yidoutang/guide" path="/yidoutang/guide"/>
+
+### 众测
+
+<Route author="sanmmm" example="/yidoutang/mtest" path="/yidoutang/mtest"/>
+
+### 全屋记
+
+<Route author="sanmmm" example="/yidoutang/case/:type?" path="/yidoutang/case/hot" :paramsDesc="['类型, 默认为`default`']">
+
+类型
+
+| 默认    | 最热 | 最新 |
+| ------- | ---- | ---- |
+| default | hot  | new  |
+
+</Route>
 ## 油价
 
 ### 今日油价
@@ -927,6 +1097,50 @@ type 为 all 时，category 参数不支持 cost 和 free
 | 75258        | 102804         | 75257        |
 
 </Route>
+
+## 站酷
+
+### 推荐
+
+<Route author="junbaor" example="/zcool/recommend/all" path="/zcool/recommend/:type" :paramsDesc="['推荐类型,详见下面的表格']">
+
+推荐类型
+
+| all      | home     | edit     |
+| -------- | -------- | -------- |
+| 全部推荐 | 首页推荐 | 编辑推荐 |
+
+</Route>
+
+### 作品总榜单
+
+<Route author="junbaor" example="/zcool/top" path="/zcool/top"/>
+
+### 用户作品
+
+<Route author="junbaor" example="/zcool/user/baiyong" path="/zcool/user/:uname" :paramsDesc="['个性域名前缀']">
+
+例如: 站酷的个人主页 `https://baiyong.zcool.com.cn` 对应 rss 路径 `/zcool/user/baiyong`
+
+</Route>
+
+## 正版中国
+
+### 分类列表
+
+<Route author="sanmmm" example="/getitfree/category/8" path="/getitfree/category/category?" :paramsDesc="['内容类型, 默认为`全部`']">
+
+类型
+
+| 全部文章 | 永久免费 | 限时折扣 | 限时免费 | PC  | Mac | Android | UWP |
+| -------- | -------- | -------- | -------- | --- | --- | ------- | --- |
+| all      | 311      | 309      | 310      | 8   | 50  | 17      | 312 |
+
+</Route>
+
+### 搜索
+
+<Route author="sanmmm" example="/getitfree/search/windows" path="/getitfree/search/:keyword" :paramsDesc="['搜索关键词']"/>
 
 ## 中国大学 MOOC(慕课)
 
