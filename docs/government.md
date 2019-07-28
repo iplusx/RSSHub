@@ -77,6 +77,16 @@ pageClass: routes
 
 </Route>
 
+## 中国证券监督管理委员会
+
+### 发审委公告
+
+<Route author="chinobing" example="/csrc/fashenwei" path="/csrc/fashenwei"/>
+
+### 证监会消息
+
+<Route author="chinobing LogicJake" example="/csrc/news/zjhxwfb-xwfbh" path="/csrc/news/:suffix?" :paramsDesc="['支持形如`http://www.csrc.gov.cn/pub/newsite/*/*`的网站，将 newsite 后面的两段网址后缀以 - 连接']" />
+
 ## 中国驻外使领馆
 
 ### 大使馆重要通知
@@ -197,3 +207,15 @@ pageClass: routes
 ### 首页信息
 
 <Route author="SunShinenny" example="/gov/veterans/index" path="/gov/veterans/index"/>
+
+## 中华人民共和国外交部
+
+### 发言人表态
+
+<Route author="nicolaszf" example="/gov/fmprc/fyrbt" path="/gov/fmprc/fyrbt"/>
+
+## 中央纪委国家监委
+
+### 审查调查
+
+<Route author="LogicJake" example="/ccdi/scdc" path="/ccdi/scdc"/>
