@@ -7,16 +7,9 @@
 {{ /if }}
 >
     <channel>
-<<<<<<< HEAD
         <title>{{ title }}</title>
         <link>{{ link }}</link>
         <description>{{ description }}</description>
-=======
-        <title><![CDATA[{{@ title || 'RSSHub' }}]]></title>
-        <link>{{ link || 'https://github.com/DIYgod/RSSHub' }}</link>
-        <atom:link href="{{ atomlink }}" rel="self" type="application/rss+xml" />
-        <description><![CDATA[{{@ description || title }} - Made with love by RSSHub(https://github.com/DIYgod/RSSHub)]]></description>
->>>>>>> wangjunyu
         <generator>RSSHub</generator>
         <webMaster>i@diygod.me (DIYgod)</webMaster>
         {{ if itunes_author }}<itunes:author>{{ itunes_author}}</itunes:author>{{ /if }}
